@@ -13,7 +13,9 @@ const forecast = (latitude, longitude, callback) =>{
         } else {
             const degrees = currently.temperature;
             const rainChance = currently.precipProbability;
-            callback(undefined, daily.data[0].summary + ' Es ist gerade ' + degrees + ' Grad. Es gibt eine ' + rainChance + ' % Regenwahrscheinlichkeit.')
+            callback(undefined, daily.data[0].summary + ' Es ist gerade ' + degrees +
+             ' Grad. Es gibt eine ' + rainChance + ' % Regenwahrscheinlichkeit. Mit einer Höchsttemperatur von ' +
+             daily.data[0].temperatureHigh + ' Grad und einer Tiefsttemperatur von ' + daily.data[0].temperatureLow + ' Grad.')
         }
     });
 };
